@@ -234,10 +234,11 @@ function groupBy(arr, keyFn){
 // ---------- TOP CARDS ----------
 function renderCards(f){
   const clicks = sum(f.recs,'clicks') + sum(f.sc,'clicks');
-  const regs = sum(f.recs,'signups');
-  const ftd = sum(f.recs,'ftd');
   // Totals aligned with Team Performance (uses management's Media/Social figures)
-  const teamMtd = TEAMS.reduce((a,t)=>({budget:a.budget+t.mtd.budget, revenue:a.revenue+t.mtd.revenue}), {budget:0,revenue:0});
+  const teamMtd = TEAMS.reduce((a,t)=>({budget:a.budget+t.mtd.budget, revenue:a.revenue+t.mtd.revenue,
+    signups:a.signups+t.mtd.signups, users:a.users+t.mtd.users}), {budget:0,revenue:0,signups:0,users:0});
+  const regs = teamMtd.signups;
+  const ftd = teamMtd.users;
   const revenue = teamMtd.revenue;
   const profit = revenue - teamMtd.budget;
   const leads = sum(f.recs,'leads');
@@ -278,7 +279,7 @@ function renderTeam(){
   const cols=['budget','signups','users','revenue','profit'];
   const moneyCols=new Set(['budget','revenue','profit']);
   const cellMTD=(val,isMoney)=>{
-    const cls = val<0?'neg':'pos';
+    const cls = val<0?'neg':'neu';
     return `<td class="${cls}">${isMoney?fmtMoney(val):fmtInt(val)}</td>`;
   };
   const cellRR=(val,kpi,isMoney)=>{
