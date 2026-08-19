@@ -116,6 +116,8 @@
     <div style="height:340px"><canvas id="chDaily"></canvas></div>
   </div>
 
+  <h2 style="text-align:center; font-size:18px; font-weight:700; margin:24px 0 16px; color:var(--ink); letter-spacing:0.5px;">ADVERTISER REPORT</h2>
+
   <div class="grid2">
     <div class="panel">
       <div class="panel-head">
@@ -392,7 +394,7 @@ function renderBudget(){
 function renderProfit(){
   const rows = selSummary().map(s => ({...s, profit:s.revenue - s.budget})).sort((a,b) => b.profit - a.profit);
   mkChart('chProfit', {type:'bar',
-    data:{labels: rows.map(r => r.adv), datasets:[{data: rows.map(r => r.profit), backgroundColor: rows.map(r => r.profit < 0 ? '#dc2626' : '#16a34a'), borderRadius:4, barThickness:14}]},
+    data:{labels: rows.map(r => r.profit), datasets:[{data: rows.map(r => r.profit), backgroundColor: rows.map(r => r.profit < 0 ? '#dc2626' : '#16a34a'), borderRadius:4, barThickness:14}]},
     options: hbarOpts(true)});
 }
 
