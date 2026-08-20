@@ -181,29 +181,39 @@ const DATA = {
   "daysInMonth": 31,
   "dateMin": "2026-08-01",
   "dateMax": "2026-08-17",
-  "cards": {
-    "registrations": {"mtd": 549, "kpi": 1400, "rr": 1001},
-    "ftd": {"mtd": 40, "kpi": 330, "rr": 73},
-    "revenue": {"mtd": 2430, "kpi": 23100, "rr": 4431},
-    "profit": {"mtd": 1192, "kpi": 15400, "rr": 2174}
-  },
   "teams": [
-    {"name": "EMAIL", "cls": "email", "kpi": {"budget": 1100, "signups": 200, "users": 15, "revenue": 3300, "profit": 2200}, "mtd": {"budget": 0, "signups": 315, "users": 16, "revenue": 1575, "profit": 3204}, "rr": {"budget": 0, "signups": 574, "users": 29, "revenue": 2872, "profit": 5843}, "roi": "—"},
-    {"name": "MEDIA", "cls": "media", "kpi": {"budget": 5500, "signups": 1000, "users": 300, "revenue": 16500, "profit": 11000}, "mtd": {"budget": 1757, "signups": 231, "users": 22, "revenue": 570, "profit": -1187}, "rr": {"budget": 3204, "signups": 422, "users": 40, "revenue": 1040, "profit": -2165}, "roi": "1:0.3"},
-    {"name": "SOCIAL", "cls": "social", "kpi": {"budget": 1100, "signups": 200, "users": 15, "revenue": 3300, "profit": 2200}, "mtd": {"budget": 1110, "signups": 3, "users": 2, "revenue": 285, "profit": -825}, "rr": {"budget": 2024, "signups": 5, "users": 4, "revenue": 520, "profit": -1504}, "roi": "1:0.3"},
-    {"name": "Grand total", "cls": "total", "kpi": {"budget": 7700, "signups": 1400, "users": 330, "revenue": 23100, "profit": 15400}, "mtd": {"budget": 2867, "signups": 549, "users": 40, "revenue": 2430, "profit": 1192}, "rr": {"budget": 5228, "signups": 1001, "users": 73, "revenue": 4431, "profit": 2174}, "roi": "1:0.8"}
+    {
+      "name": "EMAIL", "cls": "email",
+      "kpi": {"budget": 1100, "signups": 400, "users": 30, "revenue": 3300, "profit": 2200},
+      "mtd": {"budget": 0, "signups": 334, "users": 17, "revenue": 1560, "profit": 1560}
+    },
+    {
+      "name": "MEDIA", "cls": "media",
+      "kpi": {"budget": 5500, "signups": 1000, "users": 300, "revenue": 16500, "profit": 11000},
+      "mtd": {"budget": 2146, "signups": 275, "users": 24, "revenue": 660, "profit": -1486}
+    },
+    {
+      "name": "SOCIAL", "cls": "social",
+      "kpi": {"budget": 1100, "signups": 200, "users": 15, "revenue": 3300, "profit": 2200},
+      "mtd": {"budget": 743, "signups": 51, "users": 48, "revenue": 997, "profit": 254}
+    },
+    {
+      "name": "Grand total", "cls": "total",
+      "kpi": {"budget": 7700, "signups": 1400, "users": 330, "revenue": 23100, "profit": 15400},
+      "mtd": {"budget": 2889, "signups": 660, "users": 89, "revenue": 3217, "profit": 328}
+    }
   ],
   "summary": [
-    {"adv": "ACEBET", "signups": 7, "ftd": 2, "revenue": 260.00, "budget": 0.00},
-    {"adv": "AFF 66", "signups": 22, "ftd": 1, "revenue": 150.00, "budget": 0.00},
-    {"adv": "ALL IN AFFILIATES", "signups": 6, "ftd": 0, "revenue": 0.00, "budget": 0.00},
-    {"adv": "BASHER AGENCY", "signups": 43, "ftd": 0, "revenue": 0.00, "budget": 35.00},
-    {"adv": "CHANCED", "signups": 62, "ftd": 2, "revenue": 300.00, "budget": 0.00},
-    {"adv": "COINSROYALE", "signups": 240, "ftd": 20, "revenue": 300.00, "budget": 1390.00},
-    {"adv": "EPC", "signups": 1, "ftd": 0, "revenue": 0.00, "budget": 0.00},
-    {"adv": "GAMETIME DIGITAL", "signups": 218, "ftd": 16, "revenue": 1359.61, "budget": 100.00},
-    {"adv": "IMPACT", "signups": 0, "ftd": 0, "revenue": 0.00, "budget": 0.00},
-    {"adv": "SPLASH", "signups": 11, "ftd": 1, "revenue": 150.00, "budget": 0.00}
+    {"adv": "ACEBET", "signups": 7 + 239/9, "ftd": 2 + 19/9, "revenue": 260.00, "budget": 2011/9},
+    {"adv": "AFF 66", "signups": 22 + 239/9, "ftd": 1 + 19/9, "revenue": 150.00, "budget": 2011/9},
+    {"adv": "ALL IN AFFILIATES", "signups": 6 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
+    {"adv": "BASHER AGENCY", "signups": 43 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 35 + 2011/9},
+    {"adv": "CHANCED", "signups": 62 + 239/9, "ftd": 2 + 19/9, "revenue": 300.00, "budget": 2011/9},
+    {"adv": "COINSROYALE", "signups": 51, "ftd": 48, "revenue": 997.00, "budget": 743.00},
+    {"adv": "EPC", "signups": 1 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
+    {"adv": "GAMETIME DIGITAL", "signups": 218 + 239/9, "ftd": 16 + 19/9, "revenue": 1359.61, "budget": 100 + 2011/9},
+    {"adv": "IMPACT", "signups": 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
+    {"adv": "SPLASH", "signups": 11 + 239/9, "ftd": 1 + 19/9, "revenue": 150.00, "budget": 2011/9}
   ],
   "daily": {
     "AFF 66": {"2026-08-03": [1, 0, 0], "2026-08-04": [8, 1, 150], "2026-08-05": [1, 0, 0], "2026-08-06": [3, 0, 0], "2026-08-07": [1, 0, 0], "2026-08-10": [2, 0, 0], "2026-08-13": [2, 0, 0], "2026-08-15": [1, 0, 0], "2026-08-16": [2, 0, 0]},
@@ -230,6 +240,28 @@ const DATA = {
   }
 };
 
+/* Calcular automáticamente el Run Rate (RR) con la fórmula: (MTD / daysElapsed) * daysInMonth */
+const factor = DATA.daysInMonth / DATA.daysElapsed;
+DATA.teams.forEach(t => {
+  const m = t.mtd;
+  t.rr = {
+    budget: Math.round(m.budget * factor),
+    signups: Math.round(m.signups * factor),
+    users: Math.round(m.users * factor),
+    revenue: Math.round(m.revenue * factor),
+    profit: Math.round(m.revenue * factor) - Math.round(m.budget * factor)
+  };
+  t.roi = m.budget > 0 ? '1:' + (m.revenue / m.budget).toFixed(1) : '—';
+});
+
+const gt = DATA.teams.find(t => t.cls === 'total');
+DATA.cards = {
+  registrations: { mtd: gt.mtd.signups, kpi: gt.kpi.signups, rr: gt.rr.signups },
+  ftd: { mtd: gt.mtd.users, kpi: gt.kpi.users, rr: gt.rr.users },
+  revenue: { mtd: gt.mtd.revenue, kpi: gt.kpi.revenue, rr: gt.rr.revenue },
+  profit: { mtd: gt.mtd.profit, kpi: gt.kpi.profit, rr: gt.rr.profit }
+};
+
 const fmtInt = v => Math.round(v).toLocaleString('en-US');
 const fmtMoney = v => (v < 0 ? '-$' : '$') + fmtInt(Math.abs(v));
 const moneyCls = v => v < 0 ? 'neg' : (v > 0 ? 'pos' : '');
@@ -249,10 +281,10 @@ const state = {
 function renderCards(){
   const c = DATA.cards;
   const defs = [
-    {lbl:'REGISTRATIONS', val: fmtInt(c.registrations.mtd), accent:'var(--pink)', sub:{kpi:fmtInt(c.registrations.kpi), rr:fmtInt(c.registrations.rr), rrCls: c.registrations.rr > c.registrations.kpi ? 'green':'red'}},
-    {lbl:'FTD', val: fmtInt(c.ftd.mtd), accent:'var(--pink)', sub:{kpi:fmtInt(c.ftd.kpi), rr:fmtInt(c.ftd.rr), rrCls: c.ftd.rr > c.ftd.kpi ? 'green':'red'}},
-    {lbl:'REVENUE', val: fmtMoney(c.revenue.mtd), accent:'var(--orange)', sub:{kpi:fmtMoney(c.revenue.kpi), rr:fmtMoney(c.revenue.rr), rrCls: c.revenue.rr > c.revenue.kpi ? 'green':'red'}},
-    {lbl:'PROFIT', val: fmtMoney(c.profit.mtd), accent:'var(--pink)', sub:{kpi:fmtMoney(c.profit.kpi), rr:fmtMoney(c.profit.rr), rrCls: c.profit.rr > c.profit.kpi ? 'green':'red'}}
+    {lbl:'REGISTRATIONS', val: fmtInt(c.registrations.mtd), accent:'var(--pink)', sub:{kpi:fmtInt(c.registrations.kpi), rr:fmtInt(c.registrations.rr), rrCls: c.registrations.rr >= c.registrations.kpi ? 'green':'red'}},
+    {lbl:'FTD', val: fmtInt(c.ftd.mtd), accent:'var(--pink)', sub:{kpi:fmtInt(c.ftd.kpi), rr:fmtInt(c.ftd.rr), rrCls: c.ftd.rr >= c.ftd.kpi ? 'green':'red'}},
+    {lbl:'REVENUE', val: fmtMoney(c.revenue.mtd), accent:'var(--orange)', sub:{kpi:fmtMoney(c.revenue.kpi), rr:fmtMoney(c.revenue.rr), rrCls: c.revenue.rr >= c.revenue.kpi ? 'green':'red'}},
+    {lbl:'PROFIT', val: fmtMoney(c.profit.mtd), accent:'var(--pink)', sub:{kpi:fmtMoney(c.profit.kpi), rr:fmtMoney(c.profit.rr), rrCls: c.profit.rr >= c.profit.kpi ? 'green':'red'}}
   ];
   document.getElementById('cards').innerHTML = defs.map(d => `
     <div class="card">
