@@ -195,12 +195,12 @@ const DATA = {
     {
       "name": "SOCIAL", "cls": "social",
       "kpi": {"budget": 1100, "signups": 200, "users": 15, "revenue": 3300, "profit": 2200},
-      "mtd": {"budget": 743, "signups": 51, "users": 48, "revenue": 997, "profit": 254}
+      "mtd": {"budget": 743, "signups": 51, "users": 48, "revenue": 1057, "profit": 314}
     },
     {
       "name": "Grand total", "cls": "total",
       "kpi": {"budget": 7700, "signups": 1400, "users": 330, "revenue": 23100, "profit": 15400},
-      "mtd": {"budget": 2889, "signups": 660, "users": 89, "revenue": 3217, "profit": 328}
+      "mtd": {"budget": 2889, "signups": 660, "users": 89, "revenue": 3277, "profit": 388}
     }
   ],
   "summary": [
@@ -209,7 +209,7 @@ const DATA = {
     {"adv": "ALL IN AFFILIATES", "signups": 6 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
     {"adv": "BASHER AGENCY", "signups": 43 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 35 + 2011/9},
     {"adv": "CHANCED", "signups": 62 + 239/9, "ftd": 2 + 19/9, "revenue": 300.00, "budget": 2011/9},
-    {"adv": "COINSROYALE", "signups": 51, "ftd": 48, "revenue": 997.00, "budget": 743.00},
+    {"adv": "COINSROYALE", "signups": 51, "ftd": 48, "revenue": 1057.00, "budget": 743.00},
     {"adv": "EPC", "signups": 1 + 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
     {"adv": "GAMETIME DIGITAL", "signups": 218 + 239/9, "ftd": 16 + 19/9, "revenue": 1359.61, "budget": 100 + 2011/9},
     {"adv": "IMPACT", "signups": 239/9, "ftd": 19/9, "revenue": 0.00, "budget": 2011/9},
@@ -424,21 +424,12 @@ function renderBudget(){
     options: hbarOpts(true)});
 }
 
-/* ---------- Profit by Advertiser (CORREGIDO: usa r.adv como label) ---------- */
+/* CORREGIDO: labels usa r.adv para mostrar el nombre del anunciante */
 function renderProfit(){
-  const rows = selSummary().map(s => ({...s, profit:s.revenue - s.budget})).sort((a,b) => b.profit - a.profit);
+  const rows = selSummary().map(s => ({...s, profit: s.revenue - s.budget})).sort((a,b) => b.profit - a.profit);
   mkChart('chProfit', {type:'bar',
-    data:{
-      labels: rows.map(r => r.adv),
-      datasets:[{
-        data: rows.map(r => r.profit),
-        backgroundColor: rows.map(r => r.profit < 0 ? '#dc2626' : '#16a34a'),
-        borderRadius:4,
-        barThickness:14
-      }]
-    },
-    options: hbarOpts(true)
-  });
+    data:{labels: rows.map(r => r.adv), datasets:[{data: rows.map(r => r.profit), backgroundColor: rows.map(r => r.profit < 0 ? '#dc2626' : '#16a34a'), borderRadius:4, barThickness:14}]},
+    options: hbarOpts(true)});
 }
 
 /* ---------- Top 5 tables ---------- */
