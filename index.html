@@ -199,7 +199,7 @@ const DATA = {
     },
     {
       "name": "Grand total", "cls": "total",
-      "kpi": {"budget": 7700, "signups": 1400, "users": 330, "revenue": 23100, "profit": 15400},
+      "kpi": {"budget": 7700, "signups": 1600, "users": 345, "revenue": 23100, "profit": 15400},
       "mtd": {"budget": 3759, "signups": 1092, "users": 121, "revenue": 4791, "profit": 1032}
     }
   ],
@@ -371,8 +371,8 @@ function renderDaily(){
       solid('Registrations (Avg: ' + fmtInt(avg(reg)) + '/day)', '#2f6fed', reg),
       solid('FTD (Avg: ' + f1(avg(ftd)) + '/day)', '#ec4899', ftd),
       solid('Revenue (Avg: $' + fmtInt(avg(rev)) + '/day)', '#eab308', rev),
-      dashed('KPI SIGNUPS (' + f1(1400/31) + '/day)', '#2f6fed', 1400/31),
-      dashed('KPI FTD (' + f1(330/31) + '/day)', '#ec4899', 330/31),
+      dashed('KPI SIGNUPS (' + f1(1600/31) + '/day)', '#2f6fed', 1600/31),
+      dashed('KPI FTD (' + f1(345/31) + '/day)', '#ec4899', 345/31),
       dashed('KPI REVENUE ($' + fmtInt(23100/31) + '/day)', '#eab308', 23100/31)
     ]},
     options:{responsive:true, maintainAspectRatio:false, interaction:{mode:'index', intersect:false},
